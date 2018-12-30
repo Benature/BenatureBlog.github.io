@@ -115,7 +115,7 @@
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https://benature.github.io/2018/12/30/我遇到的bug全集/02循环一次.png">
 <meta property="og:image" content="https://benature.github.io/2018/12/30/我遇到的bug全集/02循环一次.png">
-<meta property="og:updated_time" content="2018-12-30T16:18:01.125Z">
+<meta property="og:updated_time" content="2018-12-30T16:19:37.167Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我遇到的bug全集">
 <meta name="twitter:description" content="雨王bug全集">
@@ -386,7 +386,7 @@
 <p>   “没事你加个杠干哈呀…”<br>   然后我百度了一下<code>\a</code>,直接printf是提示音响.<br>   “你跑程序时候就没听到什么东西吗???”<br>   “我也不知道为啥加了个杠…”</p>
 <h2 id="2-为什么四重循环只循环了一次"><a href="#2-为什么四重循环只循环了一次" class="headerlink" title="2. 为什么四重循环只循环了一次"></a>2. 为什么四重循环只循环了一次</h2><p>   雨王正在赶算法课的小项目作业，突然和我说他的冒泡排序出了问题<br>   我试了一下，的确，循环不对劲。<br>   老套路<code>printf</code>大法好,首先在最外层循环打印循环变量<code>printf(&quot;i = %d\n&quot;,i)</code><br>   结果怎么运行都只<code>printf</code>一次<br>   <img src="/2018/12/30/我遇到的bug全集/02循环一次.png" alt="只循环一次"><br>   输出结果:<br>   <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span></span><br><span class="line"><span class="comment">// 然后就没了...</span></span><br></pre></td></tr></table></figure></p>
 <p>   好吧,有点蒙,然后抱着瞎猫心态在所有循环外再打印一次<code>i</code><br>   输出结果:<br>   <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">1</span></span><br><span class="line">i = <span class="number">10</span></span><br></pre></td></tr></table></figure></p>
-<p>   ?????嗯??????<br>   然后再认真看看里面几层的循环变量名<br>   <img src="/2018/12/30/我遇到的bug全集/02循环一次.png" alt="只循环一次"><br>   手动微笑</p>
+<p>   ???<br>   ?????嗯??????<br>   然后再认真看看里面几层的循环变量名<br>   <img src="/2018/12/30/我遇到的bug全集/02循环一次.png" alt="只循环一次"><br>   手动微笑</p>
 
       
     </div>
