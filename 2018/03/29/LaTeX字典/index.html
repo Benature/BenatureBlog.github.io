@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-TW">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+    
+    
+  <script src="/BenatureBlog.github.io/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/BenatureBlog.github.io/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/BenatureBlog.github.io/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/BenatureBlog.github.io/css/main.css?v=6.0.6" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/BenatureBlog.github.io/images/apple-touch-icon-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/BenatureBlog.github.io/images/favicon-32x32-next.png?v=6.0.6">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/BenatureBlog.github.io/images/favicon-16x16-next.png?v=6.0.6">
+
+
+  <link rel="mask-icon" href="/BenatureBlog.github.io/images/logo.svg?v=6.0.6" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/BenatureBlog.github.io/',
+    scheme: 'Gemini',
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="关于latex的一些基础代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LaTeX字典">
+<meta property="og:url" content="https://Benature.github.io/BenatureBlog.github.io/2018/03/29/LaTeX字典/index.html">
+<meta property="og:site_name" content="Benature&#39;s Simple Blog">
+<meta property="og:description" content="关于latex的一些基础代码">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:updated_time" content="2018-12-30T14:56:34.231Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LaTeX字典">
+<meta name="twitter:description" content="关于latex的一些基础代码">
+
+
+
+
+
+
+  <link rel="canonical" href="https://Benature.github.io/BenatureBlog.github.io/2018/03/29/LaTeX字典/">
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>LaTeX字典 | Benature's Simple Blog</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-TW">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/BenatureBlog.github.io/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Benature's Simple Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切換導航欄">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+          
+  <li class="menu-item menu-item-home">
+    <a href="/BenatureBlog.github.io/" rel="section">
+      首頁</a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-tags">
+    <a href="/BenatureBlog.github.io/tags/" rel="section">
+      標籤<span class="badge">3</span>
+      </a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-categories">
+    <a href="/BenatureBlog.github.io/categories/" rel="section">
+      分類<span class="badge">1</span>
+      </a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-archives">
+    <a href="/BenatureBlog.github.io/archives/" rel="section">
+      歸檔<span class="badge">11</span>
+      </a>
+</li>
+
+      
+        
+        
+          
+  <li class="menu-item menu-item-html">
+    <a href="/BenatureBlog.github.io/categories/HTML/" rel="section">
+      HTML</a>
+</li>
+
+      
+
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://Benature.github.io/BenatureBlog.github.io/BenatureBlog.github.io/2018/03/29/LaTeX字典/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Benature">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/BenatureBlog.github.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Benature's Simple Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">LaTeX字典</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-03-29T22:59:00+08:00">2018-03-29</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>关于latex的一些基础代码<br><a id="more"></a></p>
+<h1 id="Greek-Letters"><a href="#Greek-Letters" class="headerlink" title="Greek Letters"></a>Greek Letters</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">希腊</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">α A</td>
+<td style="text-align:center">\alpha A</td>
+</tr>
+<tr>
+<td style="text-align:center">μ N</td>
+<td style="text-align:center">\mu N</td>
+</tr>
+<tr>
+<td style="text-align:center">β B</td>
+<td style="text-align:center">\beta B</td>
+</tr>
+<tr>
+<td style="text-align:center">ξ Ξ</td>
+<td style="text-align:center">\xi \Xi</td>
+</tr>
+<tr>
+<td style="text-align:center">γ Γ</td>
+<td style="text-align:center">\gamma \Gamma</td>
+</tr>
+<tr>
+<td style="text-align:center">o O</td>
+<td style="text-align:center">o O</td>
+</tr>
+<tr>
+<td style="text-align:center">δ Δ</td>
+<td style="text-align:center">\delta \ Delta</td>
+</tr>
+<tr>
+<td style="text-align:center">π Π</td>
+<td style="text-align:center">\pi \Pi</td>
+</tr>
+<tr>
+<td style="text-align:center">ϵ ε E</td>
+<td style="text-align:center">\epsilon \varepsilon   E</td>
+</tr>
+<tr>
+<td style="text-align:center">ρ ϱ P</td>
+<td style="text-align:center">\rho \varrho P</td>
+</tr>
+<tr>
+<td style="text-align:center">ζ Z</td>
+<td style="text-align:center">\zeta Z</td>
+</tr>
+<tr>
+<td style="text-align:center">σ Σ</td>
+<td style="text-align:center">\sigma \Sigma</td>
+</tr>
+<tr>
+<td style="text-align:center">η H</td>
+<td style="text-align:center">\eta H</td>
+</tr>
+<tr>
+<td style="text-align:center">τ T</td>
+<td style="text-align:center">\tau T</td>
+</tr>
+<tr>
+<td style="text-align:center">θ ϑ Θ</td>
+<td style="text-align:center">\theta \vartheta \Theta</td>
+</tr>
+<tr>
+<td style="text-align:center">υ Υ</td>
+<td style="text-align:center">\upsilon \Upsilon</td>
+</tr>
+<tr>
+<td style="text-align:center">ι I</td>
+<td style="text-align:center">\iota I</td>
+</tr>
+<tr>
+<td style="text-align:center">ϕ φ Φ</td>
+<td style="text-align:center">\phi \varphi \Phi</td>
+</tr>
+<tr>
+<td style="text-align:center">κ K</td>
+<td style="text-align:center">\kappa K</td>
+</tr>
+<tr>
+<td style="text-align:center">χ X</td>
+<td style="text-align:center">\chi X</td>
+</tr>
+<tr>
+<td style="text-align:center">λ Λ</td>
+<td style="text-align:center">\lambda \Lambda</td>
+</tr>
+<tr>
+<td style="text-align:center">ψ Ψ</td>
+<td style="text-align:center">\psi \Psi</td>
+</tr>
+<tr>
+<td style="text-align:center">μ M</td>
+<td style="text-align:center">\mu M</td>
+</tr>
+<tr>
+<td style="text-align:center">ω Ω</td>
+<td style="text-align:center">\omega \Omega</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">Operator</th>
+<th style="text-align:center">语法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">cos</td>
+<td style="text-align:center">\cos</td>
+</tr>
+<tr>
+<td style="text-align:center">sin</td>
+<td style="text-align:center">\sin</td>
+</tr>
+<tr>
+<td style="text-align:center">lim</td>
+<td style="text-align:center">\lim</td>
+</tr>
+<tr>
+<td style="text-align:center">exp</td>
+<td style="text-align:center">\exp</td>
+</tr>
+<tr>
+<td style="text-align:center">→</td>
+<td style="text-align:center">\to</td>
+</tr>
+<tr>
+<td style="text-align:center">∞</td>
+<td style="text-align:center">\infty</td>
+</tr>
+<tr>
+<td style="text-align:center">≡</td>
+<td style="text-align:center">\equiv</td>
+</tr>
+<tr>
+<td style="text-align:center">mod</td>
+<td style="text-align:center">\bmod</td>
+</tr>
+<tr>
+<td style="text-align:center">×</td>
+<td style="text-align:center">\times</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Power-and-Indices"><a href="#Power-and-Indices" class="headerlink" title="Power and Indices"></a>Power and Indices</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">语法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1. $k_{n+1}$</td>
+<td style="text-align:center">k_{n+1}</td>
+</tr>
+<tr>
+<td style="text-align:center">2. $n^2$</td>
+<td style="text-align:center">n^2</td>
+</tr>
+<tr>
+<td style="text-align:center">3. $k_n^2$</td>
+<td style="text-align:center">k_n^2</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Fractions-and-Binomials"><a href="#Fractions-and-Binomials" class="headerlink" title="Fractions and Binomials"></a>Fractions and Binomials</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">语法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1. $\frac{n!}{k!(n-k)!}$</td>
+<td style="text-align:center">\frac{n!}{k!(n-k)!}</td>
+</tr>
+<tr>
+<td style="text-align:center">2. $\binom{n}{k}$</td>
+<td style="text-align:center">\binom{n}{k}</td>
+</tr>
+<tr>
+<td style="text-align:center">3. $\frac{\frac{x}{1}}{x - y}$</td>
+<td style="text-align:center">\frac{\frac{x}{1}}{x - y}</td>
+</tr>
+<tr>
+<td style="text-align:center">4. $^3/_7$</td>
+<td style="text-align:center">^3/_7</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Roots"><a href="#Roots" class="headerlink" title="Roots"></a>Roots</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">语法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1. $\sqrt{k}$</td>
+<td style="text-align:center">\sqrt{k}</td>
+</tr>
+<tr>
+<td style="text-align:center">2. $\sqrt[n]{k}$</td>
+<td style="text-align:center">\sqrt[n]{k}</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Sums-and-Integrals"><a href="#Sums-and-Integrals" class="headerlink" title="Sums and Integrals"></a>Sums and Integrals</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1. $\sum_{i=1}^{10} t_i$</td>
+<td style="text-align:center">\sum_{i=1}^{10} t_i</td>
+</tr>
+<tr>
+<td style="text-align:center">2. $\int_0^\infty\mathrm{e}^{-x}\,\mathrm{d}x$</td>
+<td style="text-align:center">\int_0^\infty \mathrm{e}^{-x}\,\mathrm{d}x</td>
+</tr>
+<tr>
+<td style="text-align:center">4. $\sum$</td>
+<td style="text-align:center">\sum</td>
+</tr>
+<tr>
+<td style="text-align:center">5. $\prod$</td>
+<td style="text-align:center">\prod</td>
+</tr>
+<tr>
+<td style="text-align:center">6. $\coprod$</td>
+<td style="text-align:center">\coprod</td>
+</tr>
+<tr>
+<td style="text-align:center">7. $\bigoplus$</td>
+<td style="text-align:center">\bigoplus</td>
+</tr>
+<tr>
+<td style="text-align:center">8. $\bigotimes$</td>
+<td style="text-align:center">\bigotimes</td>
+</tr>
+<tr>
+<td style="text-align:center">9. $\bigodot$</td>
+<td style="text-align:center">\bigodot</td>
+</tr>
+<tr>
+<td style="text-align:center">10. $\bigcup$</td>
+<td style="text-align:center">\bigcup</td>
+</tr>
+<tr>
+<td style="text-align:center">11. $\bigcap$</td>
+<td style="text-align:center">\bigcap</td>
+</tr>
+<tr>
+<td style="text-align:center">12. $\biguplus$</td>
+<td style="text-align:center">\biguplus</td>
+</tr>
+<tr>
+<td style="text-align:center">13. $\bigsqcup$</td>
+<td style="text-align:center">\bigsqcup</td>
+</tr>
+<tr>
+<td style="text-align:center">14. $\bigvee$</td>
+<td style="text-align:center">\bigvee</td>
+</tr>
+<tr>
+<td style="text-align:center">15. $\bigwedge$</td>
+<td style="text-align:center">\bigwedge</td>
+</tr>
+<tr>
+<td style="text-align:center">16. $\int$</td>
+<td style="text-align:center">\int</td>
+</tr>
+<tr>
+<td style="text-align:center">17. $\oint$</td>
+<td style="text-align:center">\oint</td>
+</tr>
+<tr>
+<td style="text-align:center">18. $\iint$</td>
+<td style="text-align:center">\iint</td>
+</tr>
+<tr>
+<td style="text-align:center">19. $\iiint$</td>
+<td style="text-align:center">\iiint</td>
+</tr>
+<tr>
+<td style="text-align:center">20. $\idotsint$</td>
+<td style="text-align:center">\idotsint</td>
+</tr>
+<tr>
+<td style="text-align:center">21. $\sum_{\substack{0&lt;i&lt;m \0&lt;j&lt;n}} P(i, j)$</td>
+<td style="text-align:center">\sum{\substack{0&lt;i&lt;m\0&lt;j&lt;n}} P(i, j)</td>
+</tr>
+<tr>
+<td style="text-align:center">22. $\dots$</td>
+<td style="text-align:center">\dots</td>
+</tr>
+<tr>
+<td style="text-align:center">23. $\int\limits_a^b$</td>
+<td style="text-align:center">\int\limits_a^b</td>
+</tr>
+<tr>
+<td style="text-align:center">24. $a’$</td>
+<td style="text-align:center">a`</td>
+</tr>
+<tr>
+<td style="text-align:center">25. $a^{\prime}$</td>
+<td style="text-align:center">a^{\prime}</td>
+</tr>
+<tr>
+<td style="text-align:center">25. $a’’$</td>
+<td style="text-align:center">a’’</td>
+</tr>
+<tr>
+<td style="text-align:center">26. $\int y\, \mathrm{d}x$</td>
+<td style="text-align:center">\int y\, \mathrm{d}x</td>
+</tr>
+<tr>
+<td style="text-align:center">27. $\hat{a}$</td>
+<td style="text-align:center">hat{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">28. $\bar{a}$</td>
+<td style="text-align:center">\bar{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">29. $\grave{a}$</td>
+<td style="text-align:center">\grave{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">30. $\acute{a}$</td>
+<td style="text-align:center">\acute{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">31. $\dot{a}$</td>
+<td style="text-align:center">\dot{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">32. $\ddot{a}$</td>
+<td style="text-align:center">\ddot{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">33. $\not{a}$</td>
+<td style="text-align:center">\not{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">34. $\mathring{a}$</td>
+<td style="text-align:center">\mathring{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">35. $\overrightarrow{AB}$</td>
+<td style="text-align:center">\overrightarrow{AB}</td>
+</tr>
+<tr>
+<td style="text-align:center">36. $\overleftarrow{AB}$</td>
+<td style="text-align:center">\overleftarrow{AB}</td>
+</tr>
+<tr>
+<td style="text-align:center">37. $a’’’$</td>
+<td style="text-align:center">a’’’</td>
+</tr>
+<tr>
+<td style="text-align:center">38. $\overline{aaa}$</td>
+<td style="text-align:center">\overline{aaa}</td>
+</tr>
+<tr>
+<td style="text-align:center">39. $\check{a}$</td>
+<td style="text-align:center">\check{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">40. $\vec{a}$</td>
+<td style="text-align:center">\vec{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">41. $\underline{a}$</td>
+<td style="text-align:center">\underline{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">42. $\color{red}x$</td>
+<td style="text-align:center">\color{red}x</td>
+</tr>
+<tr>
+<td style="text-align:center">43. $\pm$</td>
+<td style="text-align:center">\pm</td>
+</tr>
+<tr>
+<td style="text-align:center">44. $\mp$</td>
+<td style="text-align:center">\mp</td>
+</tr>
+<tr>
+<td style="text-align:center">45. $\int y \mathrm{d}x$</td>
+<td style="text-align:center">\int y \mathrm{d}x</td>
+</tr>
+<tr>
+<td style="text-align:center">49. $!$</td>
+<td style="text-align:center">!</td>
+</tr>
+<tr>
+<td style="text-align:center">50. $\ddots$</td>
+<td style="text-align:center">\ddots</td>
+</tr>
+<tr>
+<td style="text-align:center">51. $\vdots$</td>
+<td style="text-align:center">\vdots</td>
+</tr>
+<tr>
+<td style="text-align:center">52. $\ldots$</td>
+<td style="text-align:center">\ldots</td>
+</tr>
+<tr>
+<td style="text-align:center">53. $\cdots$</td>
+<td style="text-align:center">\cdots</td>
+</tr>
+<tr>
+<td style="text-align:center">54. $\therefore$</td>
+<td style="text-align:center">\therefore</td>
+</tr>
+<tr>
+<td style="text-align:center">55. $\because$</td>
+<td style="text-align:center">\because</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="Brackets-etc"><a href="#Brackets-etc" class="headerlink" title="Brackets etc"></a>Brackets etc</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">LaTeX</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1. $(a)$</td>
+<td style="text-align:center">(a)</td>
+</tr>
+<tr>
+<td style="text-align:center">2. $[a]$</td>
+<td style="text-align:center">[a]</td>
+</tr>
+<tr>
+<td style="text-align:center">3. ${a}$</td>
+<td style="text-align:center">{a}</td>
+</tr>
+<tr>
+<td style="text-align:center">4. $\langle f \rangle$</td>
+<td style="text-align:center">\langle f \rangle</td>
+</tr>
+<tr>
+<td style="text-align:center">5. $\lfloor f \rfloor$</td>
+<td style="text-align:center">\lfloor f \rfloor</td>
+</tr>
+<tr>
+<td style="text-align:center">6. $\lceil f \rceil$</td>
+<td style="text-align:center">\lceil f \rceil</td>
+</tr>
+<tr>
+<td style="text-align:center">7. $\ulcorner f \urcorner$</td>
+<td style="text-align:center">\ulcorner f \urcorner</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/BenatureBlog.github.io/2018/03/26/Python爬虫学习网站/" rel="next" title="Python爬虫学习">
+                <i class="fa fa-chevron-left"></i> Python爬虫学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/BenatureBlog.github.io/2018/03/30/PS自动化骚操作/" rel="prev" title="PS自动化的骚操作——批量制作号码牌">
+                PS自动化的骚操作——批量制作号码牌 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概要
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/BenatureBlog.github.io/images/avatar.gif" alt="Benature">
+            
+              <p class="site-author-name" itemprop="name">Benature</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/BenatureBlog.github.io/archives/">
+                
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">文章</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/BenatureBlog.github.io/categories/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分類</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/BenatureBlog.github.io/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">標籤</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Greek-Letters"><span class="nav-number">1.</span> <span class="nav-text">Greek Letters</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Operators"><span class="nav-number">2.</span> <span class="nav-text">Operators</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Power-and-Indices"><span class="nav-number">3.</span> <span class="nav-text">Power and Indices</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fractions-and-Binomials"><span class="nav-number">4.</span> <span class="nav-text">Fractions and Binomials</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Roots"><span class="nav-number">5.</span> <span class="nav-text">Roots</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sums-and-Integrals"><span class="nav-number">6.</span> <span class="nav-text">Sums and Integrals</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Brackets-etc"><span class="nav-number">7.</span> <span class="nav-text">Brackets etc</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate"> 
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Benature</span>
+
+  
+
+  
+</div>
+
+
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.0.6</div>
+
+-->
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  客流量:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+  
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/BenatureBlog.github.io/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/BenatureBlog.github.io/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/BenatureBlog.github.io/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/BenatureBlog.github.io/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/BenatureBlog.github.io/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/BenatureBlog.github.io/lib/three/three-waves.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/BenatureBlog.github.io/lib/three/canvas_lines.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/BenatureBlog.github.io/lib/three/canvas_sphere.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/BenatureBlog.github.io/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/BenatureBlog.github.io/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/BenatureBlog.github.io/js/src/affix.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/BenatureBlog.github.io/js/src/schemes/pisces.js?v=6.0.6"></script>
+
+
+
+  
+  <script type="text/javascript" src="/BenatureBlog.github.io/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/BenatureBlog.github.io/js/src/post-details.js?v=6.0.6"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/BenatureBlog.github.io/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+  
+
+</body>
+</html>
