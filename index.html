@@ -248,7 +248,7 @@
           
   <li class="menu-item menu-item-archives">
     <a href="/BenatureBlog.github.io/archives/" rel="section">
-      歸檔<span class="badge">10</span>
+      歸檔<span class="badge">9</span>
       </a>
 </li>
 
@@ -293,134 +293,6 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Benature.github.io/BenatureBlog.github.io/BenatureBlog.github.io/2018/12/30/我遇到的bug全集/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Benature">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/BenatureBlog.github.io/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Benature's Simple Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/BenatureBlog.github.io/2018/12/30/我遇到的bug全集/" itemprop="url">我遇到的bug全集</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-12-30T23:39:31+08:00">2018-12-30</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="雨王bug全集"><a href="#雨王bug全集" class="headerlink" title="雨王bug全集"></a>雨王bug全集</h1>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/BenatureBlog.github.io/2018/12/30/我遇到的bug全集/#more" rel="contents">
-              閱讀全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
     
       
 
@@ -633,31 +505,14 @@
 
       
         
-          
-            <a id="more"></a>
-<!-- more -->
-<h1 id="安装lapack3-6-0"><a href="#安装lapack3-6-0" class="headerlink" title="安装lapack3.6.0"></a>安装lapack3.6.0</h1><p><a href="https://blog.csdn.net/yuanxing14/article/details/41744461" target="_blank" rel="noopener">参考网址</a><br><code>make</code>的时候总是报错如<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">make[1]: Entering directory '/mnt/d/OneDrive - LOSA/3_Project/i数创/Coding/lapack-3.6.0/TESTING'</span><br><span class="line">SVD: Testing Singular Value Decomposition routines</span><br><span class="line">./xeigtstz &lt; svd.in &gt; zsvd.out 2&gt;&amp;1</span><br><span class="line">Makefile:461: recipe for target 'zsvd.out' failed</span><br><span class="line">make[1]: *** [zsvd.out] Error 139</span><br><span class="line">make[1]: Leaving directory '/mnt/d/OneDrive - LOSA/3_Project/i数创/Coding/lapack-3.6.0/TESTING'</span><br><span class="line">Makefile:45: recipe for target 'lapack_testing' failed</span><br><span class="line">make: *** [lapack_testing] Error 2</span><br></pre></td></tr></table></figure></p>
-<p>网上一种解决方式<code>ulimit -s unlimited</code>但无用,而且还有报错<code>-bash: ulimit: stack size: 无法修改 limit 值: 无效的参数</code>.root之后再敲命令就可以了.<br>但是还是一路报错,不过Makefile报错的行数在增加,于是强行<code>make -k</code>(keep),然后终于好了.</p>
-<h1 id="nohup后台任务"><a href="#nohup后台任务" class="headerlink" title="nohup后台任务"></a><code>nohup</code>后台任务</h1><ul>
-<li><p>开始任务</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup python3 -u Wechat_Monitor.py params1 &gt; nohup.out 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
-<p>  其中<code>-u</code>可以见到<code>print</code></p>
-</li>
-<li><p>查看进程</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\ps -ef |grep python</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>杀死进程</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill &lt;进程号&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="broken-package-BUG-问题"><a href="#broken-package-BUG-问题" class="headerlink" title="broken package BUG 问题"></a><code>broken package</code> BUG 问题</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E: Unable to correct problems, you have held broken packages</span><br></pre></td></tr></table></figure>
-<p><a href="https://www.cnblogs.com/aaron-agu/p/8862624.html" target="_blank" rel="noopener">解决</a></p>
-<h1 id="Xterm配置"><a href="#Xterm配置" class="headerlink" title="Xterm配置"></a>Xterm配置</h1><ul>
-<li><a href="https://forum.porteus.org/viewtopic.php?t=1013" target="_blank" rel="noopener">字体</a></li>
-<li><a href="http://lc16692.is-programmer.com/posts/40526.html" target="_blank" rel="noopener">中文乱码</a></li>
-</ul>
-
-          
+          <p>About Linux<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/BenatureBlog.github.io/2018/07/24/Linux操作选记/#more" rel="contents">
+              閱讀全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1593,21 +1448,10 @@
 
       
         
-          <h1 id="1-Hexo-安装"><a href="#1-Hexo-安装" class="headerlink" title="1. Hexo 安装"></a>1. Hexo 安装</h1><p><a href="https://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="noopener">安装教程</a><br><em>更改主题部分的实例是旧版的,新版Github<a href="https://github.com/theme-next" target="_blank" rel="noopener">地址</a></em></p>
-<h1 id="2-Hexo-装饰"><a href="#2-Hexo-装饰" class="headerlink" title="2. Hexo 装饰"></a>2. Hexo 装饰</h1><p><a href="https://segmentfault.com/a/1190000009544924#articleHeader2" target="_blank" rel="noopener">NexT主题个性化设置教程</a></p>
-<h1 id="3-问题小结"><a href="#3-问题小结" class="headerlink" title="3. 问题小结"></a>3. 问题小结</h1><h2 id="3-1-Markdown插入图片"><a href="#3-1-Markdown插入图片" class="headerlink" title="3.1. Markdown插入图片"></a>3.1. <a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">Markdown插入图片</a></h2><h2 id="3-2-博文"><a href="#3-2-博文" class="headerlink" title="3.2. 博文"></a>3.2. 博文</h2><p>github库名不同于用户名时,即子网页博客,博客的文章点进去会404<br><strong>解决:</strong>  </p>
-<ol>
-<li>创建<code>CNAME</code>文件,内容写入父网页域名(没有http://)</li>
-<li>文件保存在hexo站点文件夹的<code>public</code>和<code>source</code>里(因为当初百度的时候有人说这个有人说那个,反正我都装了就对了orz)</li>
-<li><p>站点配置文件<code>_config.yml</code>中修改,如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: https://benature.github.io/child.github.io/</span><br><span class="line">root: /child.github.io/</span><br></pre></td></tr></table></figure>
+          <h1 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1. 常用命令"></a>1. 常用命令</h1><ul>
+<li>调试模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s –debug</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>hexo d -g</code> .bingo~</p>
-</li>
-</ol>
-<h1 id="报错记录"><a href="#报错记录" class="headerlink" title="报错记录"></a>报错记录</h1><h2 id="2018-3-31"><a href="#2018-3-31" class="headerlink" title="2018-3-31"></a>2018-3-31</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Error: Connection reset by 13.250.177.223 port 22</span><br><span class="line">fatal: sha1 file &apos;&lt;stdout&gt;&apos; write error: Broken pipe</span><br><span class="line">fatal: The remote end hung up unexpectedly</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="自带文档"><a href="#自带文档" class="headerlink" title="自带文档"></a>自带文档</h1><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br></p>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/BenatureBlog.github.io/2018/03/26/Hexo相关/#more" rel="contents">
@@ -1696,7 +1540,7 @@
                 
                   <a href="/BenatureBlog.github.io/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">文章</span>
                   </a>
                 </div>
@@ -1772,7 +1616,7 @@
       <div class="footer-inner">
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate"> 
     <i class="fa fa-user"></i>
   </span>
@@ -1988,8 +1832,6 @@
 
   
   
-    
-      
     
       
         
